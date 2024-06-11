@@ -846,6 +846,119 @@ app.post('/api/Application/Submitted', async (req, res) => {
     }
   });
 
+
+  app.post('/api/Login/Registration/detail', async (req, res) => {
+    try {
+        //const requestBody = req.body; // Assuming you send data in the request body
+        const requestBody = {
+            // Replace with actual data structure expected by the API
+            Name: "c2VsZWN0ICogZnJvbSAoc2VsZWN0IGNvdW50KCopIENvdXN0cywnTG9naW4nIFR5cGUsCkRBVEVOQU1FKG1vbnRoLERBVEVBREQobW9udGgsIERBVEVQQVJUKE1PTlRILERhdGVDcmVhdGVkKS0xLCBDQVNUKCcyMDA4LTAxLTAxJyBBUyBkYXRldGltZSkpKSBtb250aHMKZnJvbSBVc2VyTWFzdGVyIHdoZXJlIEF2YWlsYWJpbGl0eVRvSm9pbiBpcyBub3QgbnVsbApncm91cCBieSBEYXRlQ3JlYXRlZAp1bmlvbiBzZWxlY3QgY291bnQoKikgQ291c3RzLCdSZWdpc3RyYXRpb24nIFR5cGUsIERBVEVOQU1FKG1vbnRoLERBVEVBREQobW9udGgsIERBVEVQQVJUKE1PTlRILERhdGVDcmVhdGVkKS0xLCBDQVNUKCcyMDA4LTAxLTAxJyBBUyBkYXRldGltZSkpKSAgbW9udGhzCmZyb20gVXNlck1hc3RlciAKZ3JvdXAgYnkgRGF0ZUNyZWF0ZWQKKSB0",
+          };
+
+        console.log("Request Body: ",requestBody);
+        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+             body: JSON.stringify(requestBody)
+            //body: requestBody
+
+        });
+  
+        const result = await response.json();
+        res.json(result);
+        
+    } catch (error) {
+        res.status(500).send(error.toString());
+    }
+  });
+
+  app.post('/api/Industry/Graphics', async (req, res) => {
+    try {
+        //const requestBody = req.body; // Assuming you send data in the request body
+        const requestBody = {
+            // Replace with actual data structure expected by the API
+            Name: "c2VsZWN0IENvdW50KCopIGNvdW50cyxJbmR1c3RyeSxPcmdhbml6YXRpb25UeXBlIGZyb20gRW1wbG95ZXJNYXN0ZXIKZ3JvdXAgYnkgSW5kdXN0cnksT3JnYW5pemF0aW9uVHlwZQ==",
+          };
+
+        console.log("Request Body: ",requestBody);
+        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+             body: JSON.stringify(requestBody)
+            //body: requestBody
+
+        });
+  
+        const result = await response.json();
+        res.json(result);
+        
+    } catch (error) {
+        res.status(500).send(error.toString());
+    }
+  });
+
+  app.post('/api/Candidate/Graphics', async (req, res) => {
+    try {
+        //const requestBody = req.body; // Assuming you send data in the request body
+        const requestBody = {
+            // Replace with actual data structure expected by the API
+            Name: "c2VsZWN0IEN1cnJlbnRMb2NhdGlvbixDb3VudCgqKSBjb3VudHMsR2VuZGVyIGZyb20gVXNlck1hc3RlciAKZ3JvdXAgYnkgQ3VycmVudExvY2F0aW9uLEdlbmRlcg==",
+          };
+
+        console.log("Request Body: ",requestBody);
+        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+             body: JSON.stringify(requestBody)
+            //body: requestBody
+
+        });
+  
+        const result = await response.json();
+        res.json(result);
+        
+    } catch (error) {
+        res.status(500).send(error.toString());
+    }
+  });
+
+  app.post('/api/Candidate/Graphics/Detail', async (req, res) => {
+    try {
+        //const requestBody = req.body; // Assuming you send data in the request body
+        const requestBody = {
+            // Replace with actual data structure expected by the API
+            Name: "c2VsZWN0IENPVU5UKCopIENvdW50cyxBZ2VHcm91cCBUeXBlLCAnQWdlR3JvdXAnIENvdW50Rm9yICBmcm9tICgKc2VsZWN0IENhc2Ugd2hlbiBBZ2VZZWFycyBiZXR3ZWVuIDE4IGFuZCAyNSB0aGVuICcxOC0yNScKd2hlbiAgQWdlWWVhcnMgYmV0d2VlbiAyNSBhbmQgMzAgdGhlbiAnMjUtMzAnCndoZW4gIEFnZVllYXJzIGJldHdlZW4gMzAgYW5kIDM1IHRoZW4gJzMwLTM1JwplbHNlICczNSsnIGVuZCBBZ2VHcm91cCBmcm9tICgKU0VMRUNUIENPTlZFUlQoaW50LFJPVU5EKERBVEVESUZGKGhvdXIsRE9CLEdFVERBVEUoKSkvODc2Ni4wLDApKSBBUyBBZ2VZZWFycyAKZnJvbSBVc2VyTWFzdGVyIGdyb3VwIGJ5IENPTlZFUlQoaW50LFJPVU5EKERBVEVESUZGKGhvdXIsRE9CLEdFVERBVEUoKSkvODc2Ni4wLDApKSkgdCkgdDIKZ3JvdXAgYnkgQWdlR3JvdXAKdW5pb24Kc2VsZWN0IGNvdW50KCopIENvdW50cyxpc251bGwoR2VuZGVyLCdPdGhlcicpIFR5cGUsICdHZW5kZXInIENvdW50Rm9yICBmcm9tIFVzZXJNYXN0ZXIgCmdyb3VwIGJ5IEdlbmRlcgp1bmlvbgpzZWxlY3QgY291bnQoKikgQ291bnRzLGlzbnVsbChDdXJyZW50TG9jYXRpb24sJ0luZGlhJykgVHlwZSwgJ0xvY2F0aW9uJyBDb3VudEZvciBmcm9tIFVzZXJNYXN0ZXIgCmdyb3VwIGJ5IEN1cnJlbnRMb2NhdGlvbgp1bmlvbgpzZWxlY3QgY291bnQoKikgQ291bnRzLGlzbnVsbChlZC5OYW1lLCcxMHRoJykgVHlwZSAsJ0hpZ2hlclF1YWxpZmljYXRpb24nIENvdW50Rm9yIGZyb20gVXNlck1hc3RlciB1CmxlZnQgb3V0ZXIgam9pbiBNYXN0ZXJFZHVjYXRpb24gZWQgb24gZWQuSWQ9dS5IaWdoZXJRdWFsaWZpY2F0aW9uCmdyb3VwIGJ5IGVkLk5hbWU=",
+          };
+
+        console.log("Request Body: ",requestBody);
+        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+             body: JSON.stringify(requestBody)
+            //body: requestBody
+
+        });
+  
+        const result = await response.json();
+        res.json(result);
+        
+    } catch (error) {
+        res.status(500).send(error.toString());
+    }
+  });
+
 app.listen(port, () => {
   //console.log(`Server is running on http://localhost:${port}`);
 });
