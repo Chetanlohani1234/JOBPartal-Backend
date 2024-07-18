@@ -940,6 +940,34 @@ app.post('/api/Application/Submitted', async (req, res) => {
     }
   });
 
+  app.post('/api/Job/Graphics', async (req, res) => {
+    try {
+        //const requestBody = req.body; // Assuming you send data in the request body
+        const requestBody = {
+            // Replace with actual data structure expected by the API
+            Name: "RVhFQyBzcEVtcGxveWVyR2V0Sm9ic1RvdGFsQnlJZA==",
+          };
+
+        console.log("Request Body: ",requestBody);
+        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+             body: JSON.stringify(requestBody)
+            //body: requestBody
+
+        });
+  
+        const result = await response.json();
+        res.json(result);
+        
+    } catch (error) {
+        res.status(500).send(error.toString());
+    }
+  });
+
   app.post('/api/Candidate/Graphics', async (req, res) => {
     try {
         //const requestBody = req.body; // Assuming you send data in the request body
