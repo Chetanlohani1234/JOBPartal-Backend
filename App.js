@@ -1024,6 +1024,35 @@ app.post('/api/Application/Submitted', async (req, res) => {
     }
   });
 
-app.listen(port, () => {
-  //console.log(`Server is running on http://localhost:${port}`);
+  app.post('/api/block', async (req, res) => {
+    try {
+        //const jobId = req.body.id; // Extract jobId from request body
+
+        const requestBody = {
+            col2,
+            Id,  
+        };
+
+        console.log("Request Body: ", requestBody);
+        
+        const response = await fetch('http://plasament.com/api/ApiEmployer', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'TransactionKey': 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA'
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        const result = await response.json();
+        res.json(result);
+    } catch (error) {
+        console.error(error); // Log the error for debugging purposes
+        res.status(500).send(error.toString());
+    }
 });
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
