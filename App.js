@@ -549,7 +549,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
   
         const requestBody = {
             // Replace with actual data structure expected by the API
-            Name: "c2VsZWN0IElkLE5hbWUsQ29kZSxTb3J0T3JkZXIsRktFZHVjYXRpb24gZnJvbSBNYXN0ZXJDb3Vyc2U"
+            Name: "c2VsZWN0IElkLE5hbWUsQ29kZSxTb3J0T3JkZXIsRktFZHVjYXRpb24sQWN0aXZlIGZyb20gTWFzdGVyQ291cnNl"
           };
 
         console.log("Request Body: ",requestBody);
@@ -579,7 +579,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
 
         const requestBody = {
             // Replace with actual data structure expected by the API
-            Name: "c2VsZWN0IElkLE5hbWUsQ29kZSxTb3J0T3JkZXIsRktFZHVjYXRpb24gZnJvbSBNYXN0ZXJDb3Vyc2Ugd2hlcmUgaWQ9",
+            Name: "c2VsZWN0ICogZnJvbSBNYXN0ZXJDb3Vyc2Ugd2hlcmUgaWQ9",
             Id:jobCategoryId  
         };
 
