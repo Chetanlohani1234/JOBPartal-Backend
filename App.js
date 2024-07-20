@@ -1028,6 +1028,8 @@ app.post('/api/Application/Submitted', async (req, res) => {
     try {
         //const jobId = req.body.id; // Extract jobId from request body
 
+        const { col2, id:Id } = req.body;
+
         const requestBody = {
             col2,
             Id,  
