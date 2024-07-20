@@ -675,13 +675,18 @@ app.post('/api/Application/Submitted', async (req, res) => {
     try {
         //const requestBody = req.body; // Assuming you send data in the request body
         const jobCategoryId = req.params.id;  
-        const {searchType} = req.body;
+        const {SearchType,col2} = req.body;
+
+        console.log("Job Category ID:", jobCategoryId);
+        console.log("Request Body:", req.body);
+
 
         const requestBody = {
             // Replace with actual data structure expected by the API
-            Name: "dXBkYXRlIE1hc3RlckpvYkNhdGVnb3J5IHNldCBOYW1lPSdAQFZhbHVlJyxBY3RpdmU9J0BAM1ZhbHVlJyB3aGVyZSBJZD0=",
+            Name: "dXBkYXRlIE1hc3RlckNvdXJzZSBzZXQgTmFtZT0nQEBWYWx1ZScsQWN0aXZlPSdAQDNWYWx1ZScgd2hlcmUgSWQ9",
             Id:jobCategoryId,
-            searchType
+            SearchType,
+            col2
         };
 
         console.log("Request Body: ",requestBody);
