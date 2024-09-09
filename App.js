@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 const port = 3001; // You can change this to any port you prefer
 
-const url = 'http://plasament.com/api/ApiJob';
+const url = 'https://plasament.com/api/ApiJob';
 const transactionKey = 'Es9JpGJyajaamahe5ZMoaumQG6lpEUylIhUR5ykAcA';
 
 app.use(cors()); // Enable CORS for all routes
@@ -30,7 +30,7 @@ app.get('/api/joblist', async (req, res) => {
 app.get('/api/job/:jobId', async (req, res) => {
     try {
         const jobId = req.params.jobId;
-        const response = await fetch(`http://plasament.com/api/ApiJob/${jobId}`, {
+        const response = await fetch(`https://plasament.com/api/ApiJob/${jobId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ app.get('/api/job/:jobId', async (req, res) => {
 
 app.get('/api/Employers', async (req, res) => {
   try {
-      const response = await fetch(`http://plasament.com/api/ApiEmployer`, {
+      const response = await fetch(`https://plasament.com/api/ApiEmployer`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ app.get('/api/Employers', async (req, res) => {
 app.get('/api/Employer/:EmployerId', async (req, res) => {
   try {
       const EmployerId = req.params.EmployerId;
-      const response = await fetch(`http://plasament.com/api/ApiEmployer/${EmployerId}`, {
+      const response = await fetch(`https://plasament.com/api/ApiEmployer/${EmployerId}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ app.get('/api/Employer/:EmployerId', async (req, res) => {
 
 app.get('/api/User', async (req, res) => {
   try {
-      const response = await fetch(`http://plasament.com/api/ApiUser`, {
+      const response = await fetch(`https://plasament.com/api/ApiUser`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ app.get('/api/User', async (req, res) => {
 app.get('/api/UserId/:UserId', async (req, res) => {
   try {
       const UserId = req.params.UserId;
-      const response = await fetch(`http://plasament.com/api/ApiUser/${UserId}`, {
+      const response = await fetch(`https://plasament.com/api/ApiUser/${UserId}`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -186,7 +186,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -245,7 +245,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -276,7 +276,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -306,7 +306,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -338,7 +338,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -373,7 +373,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
 //         };
 
 //         console.log("Request Body: ",requestBody);
-//         const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+//         const response = await fetch(`https://plasament.com/api/ApiCustom`, {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -401,7 +401,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -432,7 +432,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -463,7 +463,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -492,7 +492,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -525,7 +525,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -553,7 +553,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -584,7 +584,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -615,7 +615,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -646,7 +646,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -690,7 +690,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -718,7 +718,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -749,7 +749,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -780,7 +780,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -809,7 +809,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -842,7 +842,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -870,7 +870,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
         };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -898,7 +898,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -926,7 +926,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -954,7 +954,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -982,7 +982,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1010,7 +1010,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
           };
 
         console.log("Request Body: ",requestBody);
-        const response = await fetch(`http://plasament.com/api/ApiCustom`, {
+        const response = await fetch(`https://plasament.com/api/ApiCustom`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1042,7 +1042,7 @@ app.post('/api/Application/Submitted', async (req, res) => {
 
         console.log("Request Body: ", requestBody);
         
-        const response = await fetch('http://plasament.com/api/ApiEmployer', {
+        const response = await fetch('https://plasament.com/api/ApiEmployer', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1060,6 +1060,6 @@ app.post('/api/Application/Submitted', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on https://localhost:${port}`);
 });
 
